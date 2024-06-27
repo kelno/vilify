@@ -17,6 +17,6 @@ jQuery(document).ready(function () {
     loop: true,
     supplied: "m4a, oga",
     preload: "none",
-    volume: 0.6,
+    volume: 0.5,
   });
 });
