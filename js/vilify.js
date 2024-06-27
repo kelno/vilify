@@ -42,6 +42,7 @@ $(document).ready(function () {
 
   $("#stop").click(function () {
     $("#jpId").jPlayer("stop");
+    $("#rain").jPlayer("stop");
     $("#play").text("play");
   });
 
