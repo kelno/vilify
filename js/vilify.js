@@ -12,16 +12,13 @@ $(document).ready(function() {
 });
     
     currentTrigger = 0;
-    noauto = false;
     nolyrics = false;
     
     if (location.hash == '#nolyrics') {
         nolyrics = true;
     }
     
-    if (location.hash == '#noauto' || noauto == true) {
-        
-        $("#jpId").jPlayer( {
+    $("#jpId").jPlayer( {
         ready: function () {
             $(this).jPlayer("setMedia", {
                 mp3: "res/vilifymp3.mp3", //HTML5 audio for streaming only! Buy the music folks! The National - Exile Vilify
@@ -33,24 +30,6 @@ $(document).ready(function() {
         swfPath: "./res/"
     });
     
-    noauto = true;
-        
-    }
-    else {
-        $("#jpId").jPlayer( {
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "res/vilifymp3.mp3", //HTML5 audio for streaming only! Buy the music folks! The National - Exile Vilify
-            oga: "res/vilifyogg.ogg" 
-          }).jPlayer("play");
-        },
-        volume: 0.9,
-        supplied: "mp3, oga",
-        swfPath: "./res/"
-        });
-    }
-    
-  
   
   $('#credits').click(function () {
       if ($(this).text() == 'Credits') {
@@ -70,7 +49,8 @@ $(document).ready(function() {
     });
     
     $('#play').click(function() {
-    $('#jpId').jPlayer('play');
+        $('#jpId').jPlayer('play');
+        $('#rain').jPlayer('play');
     });
   
   $('#jpId').bind($.jPlayer.event.playing, function(event) {
