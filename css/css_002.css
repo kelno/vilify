@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Rock Salt';
+  font-family: "Rock Salt";
   font-style: normal;
   font-weight: 400;
-  src: local('Rock Salt'), local('RockSalt'), url(../res/fonts/Rock_Salt.ttf) format('truetype');
+  src: local("Rock Salt"), local("RockSalt"),
+    url(../res/fonts/Rock_Salt.ttf) format("truetype");
 }
