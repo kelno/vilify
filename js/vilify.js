@@ -58,6 +58,9 @@ $(document).ready(function () {
   $("#jpId").bind($.jPlayer.event.loadstart, function (event) {
     $("#play").text("loading...");
   });
+  $("#jpId").bind($.jPlayer.event.canplay, function (event) {
+    $("#play").text("play");
+  });
   $("#jpId").bind($.jPlayer.event.suspend, function (event) {
     //$("#play").text("play"); // suspend is called immediately after play for some reason...
   });
